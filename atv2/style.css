@@ -1,0 +1,156 @@
+:root {
+  --bg: #f7f7f7;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #111827;
+  --border: #e6e6e6;
+  --success: #0f5132;
+  --danger: #6b0f16;
+  --gap: 14px;
+  --radius: 8px;
+  font-size: 16px;
+}
+
+html,body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--accent);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* centraliza conteúdo */
+.container {
+  max-width: 520px;
+  margin: 36px auto;
+  padding: 18px;
+}
+
+/* título discreto */
+h1 {
+  margin: 0 0 18px 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--accent);
+  letter-spacing: 0.2px;
+}
+
+/* formulário card simples */
+#form-produto {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: none;
+}
+
+/* campos */
+.campo {
+  margin-bottom: var(--gap);
+}
+
+.campo label {
+  display:block;
+  margin-bottom:6px;
+  font-size:0.86rem;
+  color: var(--muted);
+}
+
+.campo input[type="text"],
+.campo input[type="number"],
+.campo input {
+  width:100%;
+  padding:10px 12px;
+  font-size:0.95rem;
+  border:1px solid var(--border);
+  border-radius:6px;
+  background: transparent;
+  color: var(--accent);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.campo input:focus {
+  border-color: #cbd5e1;
+  box-shadow: none;
+}
+
+/* botão plano e minimal */
+button {
+  display:inline-block;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #ffffff;
+  color: var(--accent);
+  cursor: pointer;
+  transition: background .12s ease, transform .06s ease;
+}
+
+button:hover {
+  background: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+/* mensagem discreta */
+#mensagem {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: var(--muted);
+  background: transparent;
+  border-left: 4px solid transparent;
+}
+
+/* apenas sinal visual leve para sucesso/erro */
+.sucesso {
+  color: var(--success);
+  border-left-color: rgba(16, 185, 129, 0.18);
+  background: rgba(16,185,129,0.04);
+}
+
+.erro {
+  color: var(--danger);
+  border-left-color: rgba(220,38,38,0.12);
+  background: rgba(220,38,38,0.03);
+}
+
+/* lista de produtos minimal */
+#lista-produtos {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+#lista-produtos h3 {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+#lista-produtos-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  overflow: hidden;
+}
+
+#lista-produtos-ul li {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--accent);
+}
+
+#lista-produtos-ul li:last-child {
+  border-bottom: none;
+}

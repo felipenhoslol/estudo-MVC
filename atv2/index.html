@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro de Produto (MVC)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="minimal">
+
+    <main class="container">
+        <h1>Cadastrar Produto</h1>
+
+        <form id="form-produto">
+            <div class="campo">
+                <label for="nome">Nome do Produto:</label>
+                <input type="text" id="nome" required>
+            </div>
+            <div class="campo">
+                <label for="preco">Preço (R$):</label>
+                <input type="number" id="preco" step="0.01" min="0" required>
+            </div>
+            
+            <button type="submit">Salvar Produto</button>
+        </form>
+
+        <div id="mensagem" role="status" aria-live="polite"></div>
+
+        <!-- placeholder estático da lista (o app.js detecta se já existe) -->
+        <div id="lista-produtos" aria-live="polite"></div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
